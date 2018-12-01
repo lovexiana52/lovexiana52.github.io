@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="前端,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="CSS注释 / 内容 / 书写格式 选择器{属性：值；属性：值；…} 引入外部css文件 在header中   字体属性inherit(继承)font-size:      npx;    字体大小font-weight : normal(正常) / lighter(细) / bold(粗) / bolder(更粗) / 100 / 400 / 600 / 900 字体粗细font-style :">
+<meta name="keywords" content="前端">
+<meta property="og:type" content="article">
+<meta property="og:title" content="css">
+<meta property="og:url" content="http://yoursite.com/2018/12/01/CSS/index.html">
+<meta property="og:site_name" content="仆の博客">
+<meta property="og:description" content="CSS注释 / 内容 / 书写格式 选择器{属性：值；属性：值；…} 引入外部css文件 在header中   字体属性inherit(继承)font-size:      npx;    字体大小font-weight : normal(正常) / lighter(细) / bold(粗) / bolder(更粗) / 100 / 400 / 600 / 900 字体粗细font-style :">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-12-01T13:35:34.842Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="css">
+<meta name="twitter:description" content="CSS注释 / 内容 / 书写格式 选择器{属性：值；属性：值；…} 引入外部css文件 在header中   字体属性inherit(继承)font-size:      npx;    字体大小font-weight : normal(正常) / lighter(细) / bold(粗) / bolder(更粗) / 100 / 400 / 600 / 900 字体粗细font-style :">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/12/01/CSS/">
+
+
+
+
+
+  <title>css | 仆の博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">仆の博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">资料搜集所</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/01/CSS/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="绝对丿领域丶">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/1.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="仆の博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">css</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-01T00:00:00+08:00">
+                2018-12-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/笔记文档/" itemprop="url" rel="index">
+                    <span itemprop="name">笔记文档</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h1><p>注释 /<em> 内容 </em>/</p>
+<p>书写格式</p>
+<p>选择器{<br>属性：值；<br>属性：值；<br>…<br>}</p>
+<p>引入外部css文件 在header中</p>
+<link rel="”stylesheet”" href="”路径”">
+
+<h2 id="字体属性"><a href="#字体属性" class="headerlink" title="字体属性"></a>字体属性</h2><p>inherit(继承)<br>font-size:      npx;    字体大小<br>font-weight : normal(正常) / lighter(细) / bold(粗) / bolder(更粗) / 100 / 400 / 600 / 900 字体粗细<br>font-style : normal(普通) / italic(斜体)/inherit(继承)        字体风格<br>font-family : ‘microsoft yahei’(微软雅黑) / ‘simsun’(宋体)    字体类型<br>color : 颜色值 ‘颜色单词’ / ’#00aa00’ / ’rgb(255,0,0)’ / ‘rgba(255,0,0,.5)’<br>简写<br>font  :  font-style  font-weight  font-size  font-family;</p>
+<p>获取字体的编码 console 中输入 escape(“字体”) 如 escape(“宋体” )可得到宋体的编码   %u换成 \</p>
+<h2 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h2><p>标签选择器  标签{…}<br>类选择器(class = “类名”)    .类名{…}<br>id选择器 id=”id名”        #id名{…}<br>id 类名 命名规则<br>1、数字、字母、下划线、短横线<br>2、不能以数字开头<br>3、不能用短横线和短横线加数字开头<br>建议的命名规则<br>驼峰命名法 如（userName）</p>
+<p>通配符选择器  *{…}</p>
+<p>后代选择器 选择器1 选择器2 选择器3 … {…}<br>子代选择器 选择器1&gt;选择器2&gt;选择器3…{…}<br>并集选择器 选择器1,选择器2,选择器3,…{…}<br>交集选择器 选择器1选择2选择器3…{…}</p>
+<p>伪类选择器<br>选择器:link  本身,正常状态 （只对a有效）<br>选择器:visited  访问过的 （只对a有效）<br>选择器:hover       悬停状态 （对所有元素都有效）<br>选择器:active  点击时（瞬间，或者不松开鼠标） （对所有元素都有效）<br>选择器:focus  聚焦 表单标签文本框点击出现光标时<br>选择器:first-child        第一个元素<br>选择器:last-child      最后一个元素<br>选择器:nth-child(n)    第n个元素    n还可以为 odd(奇数) even(偶数) 3n-1(2,5,8..)<br>选择器:nth-last-child(n) 倒数第n个元素</p>
+<p>属性选择器<br>input[type=’…’]{…}        type=’…’会被选中<br>li[color]                li中有color属性就会被选中</p>
+<h2 id="文本"><a href="#文本" class="headerlink" title="文本"></a>文本</h2><p>inherit(继承)<br>line-height:npx;             行高<br>文本水平对齐方式 text-align : left(左) center(中) right(右) justify(两端对齐) (块级元素)<br>文本首行缩进 text-indent :2em ;            首行缩进2个字符  em：一个相对长度单位<br>文本修饰线  text-decoration: underline(下划线)  overline(上划线)  line-through (中划线)                none(去掉修饰线) blink(闪烁)</p>
+<h2 id="元素类型"><a href="#元素类型" class="headerlink" title="元素类型"></a>元素类型</h2><p>display: block;                            块级元素<br>display: inline;                        行内元素<br>display: inline-block;                    行内块级元素<br>display:none;                        无（隐藏不占位置）<br>visibility:hidden;                       隐藏（占位置）</p>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>background-color:red(颜色单词)/rgb(255,0,0)(rgb颜色设置)/rgba(255,255,255,.6)(a代表透明        度)/#ff0000(16进制) / transparent(透明的)                        背景颜色设置<br>background-image:url(‘路径’)                背景图片<br>background-repeat:repeat(xy平铺)/ no-repeat (不平铺) /repeat-x (x平铺) / repeat-y(y平铺);          设置背景图片是否平铺<br>background-attachment: scroll(滚动) / fixed : (固定)        设置图像滚动或固定<br>background:XXX XXX XXX                            简写</p>
+<h2 id="边框"><a href="#边框" class="headerlink" title="边框"></a>边框</h2><p>border : border-width(宽度) || border-style（样式） || border-color （颜色）设置边框<br>   border-style中有 solid(实线) dotted(点状) double(双实线) dashed(虚线)</p>
+<h2 id="边距"><a href="#边距" class="headerlink" title="边距"></a>边距</h2><p>内边距  盒子内容距离边框的距离<br>padding ：npx;<br>padding-top:上内边<br>padding-right:右内边距<br>padding-bottom:下内边距<br>padding-left:左内边距<br>1个值 ：全部<br>2个值 ：上下  左右<br>3个值 ： 上     左右  下<br>四个值 ： 上    右  下  左</p>
+<p>外边距  盒子之间的距离<br>margin:npx;<br>margin-top:上外边距<br>margin-right:右外边距<br>margin-bottom:下外边距<br>margin-left:上外边距<br>1个值 ：全部<br>2个值 ：上下  左右<br>3个值 ： 上     左右   下<br>四个值 ： 上    右  下  左<br>块级元素水平居中<br>margin : 0 auto;</p>
+<h2 id="圆角"><a href="#圆角" class="headerlink" title="圆角"></a>圆角</h2><p>border-radius: 50%(百分比表示) / npx(像素表示);<br>1个值 ：全部<br>2个值 ：上下  左右<br>3个值 ： 上     左右   下<br>四个值 ： 上    右  下  左</p>
+<h2 id="阴影"><a href="#阴影" class="headerlink" title="阴影"></a>阴影</h2><p>box-shadow: 水平阴影  垂直阴影  模糊距离  阴影大小  阴影颜色  内/外阴影(inset)；inset写了有效     外阴影不写</p>
+<h2 id="浮动"><a href="#浮动" class="headerlink" title="浮动"></a>浮动</h2><p>float:none(不浮动 默认) || left(左浮动)  || right(右浮动)</p>
+<p>##清除浮动<br>.clearfix::after{<br>   content:’.’;<br>   display: block;<br>   clear:both;<br>   visibility:hidden;<br>   height:0;<br>   line-height:0;<br>}<br>.clearfix{<br>   *zoom:1;<br>}</p>
+<h2 id="定位"><a href="#定位" class="headerlink" title="定位"></a>定位</h2><p>position：relative(相对定位 盒子占位置)<br>position:absolute;(绝对定位 盒子脱标  偏移对照最近的父代元素)<br>position:fixed;(固定定位 脱标 偏移相对浏览器)<br>position:static(静态的 默认 不能设置偏移)<br>设置偏移<br>left:npx;        距离左边的偏移<br>right:npx;        距离右边的偏移<br>top:npx;          距离上边的偏移<br>bottom:npx;        距离下边的偏移<br><strong>子绝父相</strong><br>z-index: n ;    层级 n越大层级越高</p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>outline:与边框设置一样 / none(无外轮廓线)        设置外轮廓线(文本框点击后的蓝线)<br>outline-offset:npx;                            外轮廓线与边缘的距离（可用负值）<br>list-style:none(无)                            li标签的圆点 none为去除<br>margin的塌陷问题                            给其父盒子加overflow:hidden;<br>textarea{<br>   resize:none;                              防止文本域被拖拽<br>}</p>
+<h2 id="垂直对齐方式（行内、行内块级元素）"><a href="#垂直对齐方式（行内、行内块级元素）" class="headerlink" title="垂直对齐方式（行内、行内块级元素）"></a>垂直对齐方式（行内、行内块级元素）</h2><p>常用于input与img标签<br>vertical-align:top;        顶部对齐<br>vertical-align:middle;        中线对齐</p>
+<h2 id="鼠标样式"><a href="#鼠标样式" class="headerlink" title="鼠标样式"></a>鼠标样式</h2><p>cursor:default;            跟随操作系统<br>cursor:auto;            跟随浏览器<br>cursor:pointer;            小手（链接）<br>cursor:text;            文本光标<br>cursor:move;            移动光标</p>
+<h2 id="文本溢出"><a href="#文本溢出" class="headerlink" title="文本溢出"></a>文本溢出</h2><p>overflow:visible;        默认不做处理<br>overflow:hidden;      隐藏溢出部分<br>overflow:auto;           有溢出增加滚动条，没有不加<br>overflow:scroll;        始终有滚动条</p>
+<p>文本一行显示超出显示…<br>white-space:nowrap;        文本不换行<br>overflow:hidden;        超出隐藏<br>text-overflow:ellipsis        溢出用…代替</p>
+<h2 id="文本间距"><a href="#文本间距" class="headerlink" title="文本间距"></a>文本间距</h2><p>letter-spacing: npx;        中文用<br>word-spacing :npx;          英文用</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/前端/" rel="tag"># 前端</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/29/HTML/" rel="next" title="html">
+                <i class="fa fa-chevron-left"></i> html
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/1.png" alt="绝对丿领域丶">
+            
+              <p class="site-author-name" itemprop="name">绝对丿领域丶</p>
+              <p class="site-description motion-element" itemprop="description">一条咸鱼</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS"><span class="nav-number">1.</span> <span class="nav-text">CSS</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#字体属性"><span class="nav-number">1.1.</span> <span class="nav-text">字体属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择器"><span class="nav-number">1.2.</span> <span class="nav-text">选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文本"><span class="nav-number">1.3.</span> <span class="nav-text">文本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#元素类型"><span class="nav-number">1.4.</span> <span class="nav-text">元素类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#背景"><span class="nav-number">1.5.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#边框"><span class="nav-number">1.6.</span> <span class="nav-text">边框</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#边距"><span class="nav-number">1.7.</span> <span class="nav-text">边距</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#圆角"><span class="nav-number">1.8.</span> <span class="nav-text">圆角</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#阴影"><span class="nav-number">1.9.</span> <span class="nav-text">阴影</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#浮动"><span class="nav-number">1.10.</span> <span class="nav-text">浮动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定位"><span class="nav-number">1.11.</span> <span class="nav-text">定位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他"><span class="nav-number">1.12.</span> <span class="nav-text">其他</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#垂直对齐方式（行内、行内块级元素）"><span class="nav-number">1.13.</span> <span class="nav-text">垂直对齐方式（行内、行内块级元素）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#鼠标样式"><span class="nav-number">1.14.</span> <span class="nav-text">鼠标样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文本溢出"><span class="nav-number">1.15.</span> <span class="nav-text">文本溢出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文本间距"><span class="nav-number">1.16.</span> <span class="nav-text">文本间距</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">绝对丿领域丶</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
